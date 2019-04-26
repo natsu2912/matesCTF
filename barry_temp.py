@@ -7,7 +7,7 @@ while n < NUMBER_OF_FILES:
 
 	#s = process('./barry')
 	s = remote('125.235.240.168', 1337)
-	for i in range(NUMBER_OF_FILES):
+	for i in range(100): #100 is number of random numbers
 		print s.recvuntil(' number: ')
 		s.sendline("111111111")
 		input = s.recvline()
