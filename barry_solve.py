@@ -11,10 +11,13 @@ while True:
 	s.send('1\n')
 	input = s.recvline()[22:]
 	for i in range(NUMBER_OF_FILES):
-		f = open("{}".format(1), "r")
+		f = open("{}".format(i), "r")
 		lines = f.readlines()
 		if lines[0].startswith(input):
 			break
+		#else:
+        	#   print 'input: ' + input
+        	#   print 'lines[0]: ' + lines[0]
 		f.close()
 	if i == NUMBER_OF_FILES:
 		continue
